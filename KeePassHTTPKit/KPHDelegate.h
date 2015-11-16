@@ -8,17 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class KPHServer;
+@class KPHResponseEntry;
 
 @protocol KPHDelegate <NSObject>
 
 @required
 - (NSString *)server:(KPHServer *)server labelForKey:(NSString *)key;
 - (NSString *)server:(KPHServer *)server keyForLabel:(NSString *)label;
-- (NSArray *)server:(KPHServer *)server entriesForURL:(NSString *)url;
-- (NSArray *)allEntriesForServer:(KPHServer *)server;
+- (NSArray<KPHResponseEntry *> *)server:(KPHServer *)server entriesForURL:(NSString *)url;
+- (NSArray<KPHResponseEntry *> *)allEntriesForServer:(KPHServer *)server;
 - (void)server:(KPHServer *)server setUsername:(NSString *)username andPassword:(NSString *)password forURL:(NSString *)url withUUID:(NSString *)uuid;
 - (NSString *)clientHashForServer:(KPHServer *)server;
 - (NSString *)generatePasswordForServer:(KPHServer *)server;
+
+NS_ASSUME_NONNULL_END
 
 @end
