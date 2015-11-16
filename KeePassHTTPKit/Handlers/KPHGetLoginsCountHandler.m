@@ -10,27 +10,27 @@
 
 @implementation KPHGetLoginsCountHandler
 
-- (void)handle:(KPHRequest *)request response:(KPHResponse *)response server:(KPHServer *)server
-{
-    [super handle:request response:response server:server];
-    
-    if (![self verifyRequest:request])
-        return;
-    
-    NSString *key = [self delegateKeyForLabel:request.Id];
-    if (!key)
-        return;
-    
-    KPHAESConfig *aes = [KPHAESConfig aesWithKey:key base64key:YES IV:request.Nonce base64IV:YES];
-    NSURL *url = [NSURL URLWithString:[KPHUtils decryptString:request.Url withAES:aes]];
-    if (url)
-    {
-        response.Count = [self entriesForURL:url].count;
-        response.Success = YES;
-    }
-    
-    response.Id = request.Id;
-    [self setResponseVerifier:response];
+- (void)handle:(KPHRequest *)request response:(KPHResponse *)response server:(KPHServer *)server {
+  [super handle:request response:response server:server];
+  
+  if (![self verifyRequest:request]) {
+    return;
+  }
+  
+  NSString *key = [self delegateKeyForLabel:request.Id];
+  if (!key) {
+    return;
+  }
+  
+  KPHAESConfig *aes = [KPHAESConfig aesWithKey:key base64key:YES IV:request.Nonce base64IV:YES];
+  NSURL *url = [NSURL URLWithString:[KPHUtils decryptString:request.Url withAES:aes]];
+  if (url) {
+    response.Count = [self entriesForURL:url].count;
+    response.Success = YES;
+  }
+  
+  response.Id = request.Id;
+  [self setResponseVerifier:response];
 }
 
 @end

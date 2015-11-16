@@ -17,3 +17,8 @@ FOUNDATION_EXPORT const unsigned char KeePassHTTPKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KeePassHTTPKit/PublicHeader.h>
 
 
+#import "JSONModel."
+#import "JSONModelError.h"
+#import "JSONValueTransformer.h"
+#import "JSONModelArray.h"
+#import "JSONKeyMapper.h"

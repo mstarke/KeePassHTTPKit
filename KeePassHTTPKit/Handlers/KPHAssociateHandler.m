@@ -10,23 +10,22 @@
 
 @implementation KPHAssociateHandler
 
-- (void)handle:(KPHRequest *)request response:(KPHResponse *)response server:(KPHServer *)server
-{
-    [super handle:request response:response server:server];
-    
-    if (![self verifyRequest:request withKey:request.Key])
-        return;
-    
-    NSString *label = [self delegateLabelForKey:request.Key];
-    if (label)
-    {
-        response.Id = label;
-        response.Success = YES;
-        
-        [self setResponseVerifier:response];
-    }
-    
+- (void)handle:(KPHRequest *)request response:(KPHResponse *)response server:(KPHServer *)server {
+  [super handle:request response:response server:server];
+  
+  if(![self verifyRequest:request withKey:request.Key]) {
     return;
+  }
+  
+  NSString *label = [self delegateLabelForKey:request.Key];
+  if(label) {
+    response.Id = label;
+    response.Success = YES;
+    
+    [self setResponseVerifier:response];
+  }
+  
+  return;
 }
 
 @end
