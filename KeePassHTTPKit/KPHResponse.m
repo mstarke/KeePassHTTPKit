@@ -7,7 +7,6 @@
 //
 
 #import "KPHResponse.h"
-#import "KeePassHTTPKit.h"
 
 @implementation KPHResponseStringField
 
@@ -43,7 +42,7 @@
 - (instancetype)init {
   if (self = [super init]) {
     _Success = NO;
-    _Version = [NSString stringWithFormat:@"KeePassKit %.f", KeePassHTTPKitVersionNumber];
+    _Version = @"KeePassKit";
   }
   return self;
 }
