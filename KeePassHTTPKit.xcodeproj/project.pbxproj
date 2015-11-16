@@ -60,6 +60,7 @@
 		4CDE593A1BF9E2D700C7AF5B /* KPHServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE591D1BF9E2D700C7AF5B /* KPHServer.m */; };
 		4CDE593B1BF9E2D700C7AF5B /* KPHUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591E1BF9E2D700C7AF5B /* KPHUtils.h */; };
 		4CDE593C1BF9E2D700C7AF5B /* KPHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE591F1BF9E2D700C7AF5B /* KPHUtils.m */; };
+		4CDE593E1BF9E87200C7AF5B /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDE593D1BF9E87200C7AF5B /* GCDWebServers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		4CDE591D1BF9E2D700C7AF5B /* KPHServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPHServer.m; sourceTree = "<group>"; };
 		4CDE591E1BF9E2D700C7AF5B /* KPHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPHUtils.h; sourceTree = "<group>"; };
 		4CDE591F1BF9E2D700C7AF5B /* KPHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPHUtils.m; sourceTree = "<group>"; };
+		4CDE593D1BF9E87200C7AF5B /* GCDWebServers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GCDWebServers.framework; path = Carthage/Build/Mac/GCDWebServers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDE593E1BF9E87200C7AF5B /* GCDWebServers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +156,7 @@
 		4CCAC3841BF9C30300EA4639 = {
 			isa = PBXGroup;
 			children = (
+				4CDE593D1BF9E87200C7AF5B /* GCDWebServers.framework */,
 				4CDE574B1BF9C66300C7AF5B /* JSONModel */,
 				4CCAC3901BF9C30300EA4639 /* KeePassHTTPKit */,
 				4CCAC39C1BF9C30300EA4639 /* KeePassHTTPKitTests */,
@@ -565,10 +569,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = KeePassHTTPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hicknhacksoftware.KeePassHTTPKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -583,10 +592,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = KeePassHTTPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hicknhacksoftware.KeePassHTTPKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 James Hurst. All rights reserved.
 //
 
+#import <GCDWebServers/GCDWebServers.h>
+
 #import "KPHServer.h"
 #import "KPHRequest.h"
 #import "KPHResponse.h"
@@ -56,20 +58,18 @@ static const NSUInteger kKPHDefaultPort = 19455;
                            processBlock:^GCDWebServerResponse *(GCDWebServerRequest *request) {
                              
                              NSString *clientHash = [weakSelf.delegate clientHashForServer:weakSelf];
-                             if (clientHash && [request isKindOfClass:[GCDWebServerDataRequest class]] && [request.contentType hasPrefix:@"application/json"])
-                             {
+                             if (clientHash && [request isKindOfClass:[GCDWebServerDataRequest class]] && [request.contentType hasPrefix:@"application/json"]) {
                                GCDWebServerDataRequest *dataRequest = (GCDWebServerDataRequest *)request;
                                
                                NSError *error = nil;
                                KPHRequest *kphRequest = [[KPHRequest alloc] initWithData:dataRequest.data error:&error];
-                               if (!error)
-                               {
+                               if (!error)  {
                                  KPHResponse *kphResponse = [KPHResponse responseWithRequestType:kphRequest.RequestType hash:clientHash];
                                  
                                  KPHHandler *handler = (KPHHandler *)weakSelf.handlers[kphRequest.RequestType];
-                                 if (handler)
+                                 if (handler) {
                                    [handler handle:kphRequest response:kphResponse server:weakSelf];
-                                 
+                                 }
                                  return [[GCDWebServerDataResponse alloc] initWithData:[[kphResponse toJSONString] dataUsingEncoding:NSUTF8StringEncoding] contentType:@"application/json"];
                                }
                              }
