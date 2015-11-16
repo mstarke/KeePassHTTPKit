@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KeePassHTTPKit.h"
 
 @interface KeePassHTTPKitTests : XCTestCase
 
@@ -25,7 +26,9 @@
 }
 
 - (void)test {
-  XCTFail(@"No tests implemented!");
+  KPHServer *server = [[KPHServer alloc] init];
+  [server start];
+  //XCTFail(@"No tests implemented!");
 }
 
 @end

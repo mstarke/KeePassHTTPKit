@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0A25131BFA679D007DFDBA /* GCDWebServers.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CDE593D1BF9E87200C7AF5B /* GCDWebServers.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4CCAC3921BF9C30300EA4639 /* KeePassHTTPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCAC3911BF9C30300EA4639 /* KeePassHTTPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CCAC3991BF9C30300EA4639 /* KeePassHTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAC38E1BF9C30300EA4639 /* KeePassHTTPKit.framework */; };
 		4CCAC39E1BF9C30300EA4639 /* KeePassHTTPKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAC39D1BF9C30300EA4639 /* KeePassHTTPKitTests.m */; };
@@ -72,6 +73,19 @@
 			remoteInfo = KeePassHTTPKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C0A25121BFA6794007DFDBA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C0A25131BFA679D007DFDBA /* GCDWebServers.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4CCAC38E1BF9C30300EA4639 /* KeePassHTTPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeePassHTTPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +359,7 @@
 				4CCAC38A1BF9C30300EA4639 /* Frameworks */,
 				4CCAC38B1BF9C30300EA4639 /* Headers */,
 				4CCAC38C1BF9C30300EA4639 /* Resources */,
+				4C0A25121BFA6794007DFDBA /* CopyFiles */,
 			);
 			buildRules = (
 			);
