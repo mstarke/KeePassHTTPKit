@@ -10,41 +10,50 @@
 
 @implementation KPHAESConfig
 
-- (instancetype)init
-{
-    if (self = [super init])
-    {
-        [self generateIV];
-    }
-    return self;
+- (instancetype)init {
+  if (self = [super init]) {
+    [self generateIV];
+  }
+  return self;
 }
 
-+ (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key
-{
-    KPHAESConfig *aes = [KPHAESConfig new];
++ (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key {
+  KPHAESConfig *aes = [KPHAESConfig new];
+  
+  
+  if([NSData instanceMethodForSelector:@selector(initWithBase64EncodedString:options:)]) {
     aes.key = (base64key) ? [[NSData alloc] initWithBase64EncodedString:key options:0] : [key dataUsingEncoding:NSUTF8StringEncoding];
-    [aes generateIV];
-    return aes;
+  }
+  else {
+    aes.key = (base64key) ? [[NSData alloc] initWithBase64Encoding:key] : [key dataUsingEncoding:NSUTF8StringEncoding];
+  }
+  [aes generateIV];
+  return aes;
 }
 
-+ (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key IV:(NSString *)IV base64IV:(BOOL)base64IV
-{
-    KPHAESConfig *aes = [KPHAESConfig new];
++ (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key IV:(NSString *)IV base64IV:(BOOL)base64IV {
+  KPHAESConfig *aes = [KPHAESConfig new];
+  if([NSData instanceMethodForSelector:@selector(initWithBase64EncodedString:options:)]) {
     aes.key = (base64key) ? [[NSData alloc] initWithBase64EncodedString:key options:0] : [key dataUsingEncoding:NSUTF8StringEncoding];
     aes.IV = (base64IV) ? [[NSData alloc] initWithBase64EncodedString:IV options:0] : [IV dataUsingEncoding:NSUTF8StringEncoding];
-    return aes;
+  }
+  else {
+    aes.key = (base64key) ? [[NSData alloc] initWithBase64Encoding:key] : [key dataUsingEncoding:NSUTF8StringEncoding];
+    aes.IV = (base64IV) ? [[NSData alloc] initWithBase64Encoding:IV] : [IV dataUsingEncoding:NSUTF8StringEncoding];
+  }
+  return aes;
 }
 
-- (void)generateIV
-{
-    static NSString *const charset = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    
-    NSMutableString *string = [NSMutableString stringWithCapacity:16];
-    
-    for (NSUInteger i = 0; i < 16; i++)
-        [string appendFormat: @"%C", [charset characterAtIndex: arc4random_uniform((unsigned int)charset.length) % charset.length]];
-    
-    _IV = [string dataUsingEncoding:NSUTF8StringEncoding];
+- (void)generateIV {
+  static NSString *const charset = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  
+  NSMutableString *string = [NSMutableString stringWithCapacity:16];
+  
+  for (NSUInteger i = 0; i < 16; i++) {
+    [string appendFormat: @"%C", [charset characterAtIndex: arc4random_uniform((unsigned int)charset.length) % charset.length]];
+  }
+  
+  _IV = [string dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end

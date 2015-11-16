@@ -48,7 +48,13 @@
   CCCryptorStatus status = CCCryptorCreate(kCCDecrypt, kCCAlgorithmAES, kCCOptionPKCS7Padding, aes.key.bytes, aes.key.length, aes.IV.bytes, &cryptor);
   if (status == kCCSuccess)
   {
-    NSData *encrypted = [[NSData alloc] initWithBase64EncodedString:request.Verifier options:0];
+    NSData *encrypted;
+    if([encrypted respondsToSelector:@selector(initWithBase64EncodedString:options:)]) {
+     encrypted = [[NSData alloc] initWithBase64EncodedString:request.Verifier options:0];
+    }
+    else {
+     encrypted = [[NSData alloc] initWithBase64Encoding:request.Verifier];
+    }
     NSData *decrypted = [encrypted runCryptor:cryptor];
     
     success = [[[NSString alloc] initWithData:decrypted encoding:NSUTF8StringEncoding] isEqualToString:request.Nonce];
@@ -61,7 +67,12 @@
 
 - (void)setResponseVerifier:(KPHResponse *)response {
   KPHAESConfig *aes = [KPHAESConfig aesWithKey:[self delegateKeyForLabel:response.Id] base64key:YES];
-  response.Nonce = [aes.IV base64EncodedStringWithOptions:0];
+  if([NSData respondsToSelector:@selector(base64EncodedStringWithOptions:)]) {
+    response.Nonce = [aes.IV base64EncodedStringWithOptions:0];
+  }
+  else {
+    response.Nonce = [aes.IV base64Encoding];
+  }
   response.Verifier = [KPHUtils performOpertaion:kCCEncrypt withAES:aes onString:response.Nonce base64input:NO base64output:YES];
 }
 
