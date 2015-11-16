@@ -10,13 +10,13 @@
 		4CCAC3921BF9C30300EA4639 /* KeePassHTTPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCAC3911BF9C30300EA4639 /* KeePassHTTPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CCAC3991BF9C30300EA4639 /* KeePassHTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAC38E1BF9C30300EA4639 /* KeePassHTTPKit.framework */; };
 		4CCAC39E1BF9C30300EA4639 /* KeePassHTTPKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAC39D1BF9C30300EA4639 /* KeePassHTTPKitTests.m */; };
-		4CDE582D1BF9C66300C7AF5B /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE574D1BF9C66300C7AF5B /* JSONModel.h */; };
+		4CDE582D1BF9C66300C7AF5B /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE574D1BF9C66300C7AF5B /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE582E1BF9C66300C7AF5B /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE574E1BF9C66300C7AF5B /* JSONModel.m */; };
-		4CDE582F1BF9C66300C7AF5B /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE574F1BF9C66300C7AF5B /* JSONModelArray.h */; };
+		4CDE582F1BF9C66300C7AF5B /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE574F1BF9C66300C7AF5B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE58301BF9C66300C7AF5B /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57501BF9C66300C7AF5B /* JSONModelArray.m */; };
 		4CDE58311BF9C66300C7AF5B /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57511BF9C66300C7AF5B /* JSONModelClassProperty.h */; };
 		4CDE58321BF9C66300C7AF5B /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57521BF9C66300C7AF5B /* JSONModelClassProperty.m */; };
-		4CDE58331BF9C66300C7AF5B /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57531BF9C66300C7AF5B /* JSONModelError.h */; };
+		4CDE58331BF9C66300C7AF5B /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57531BF9C66300C7AF5B /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE58341BF9C66300C7AF5B /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57541BF9C66300C7AF5B /* JSONModelError.m */; };
 		4CDE58351BF9C66300C7AF5B /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57561BF9C66300C7AF5B /* NSArray+JSONModel.h */; };
 		4CDE58361BF9C66300C7AF5B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57571BF9C66300C7AF5B /* NSArray+JSONModel.m */; };
@@ -27,9 +27,9 @@
 		4CDE583B1BF9C66300C7AF5B /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE575D1BF9C66300C7AF5B /* JSONHTTPClient.m */; };
 		4CDE583C1BF9C66300C7AF5B /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE575E1BF9C66300C7AF5B /* JSONModel+networking.h */; };
 		4CDE583D1BF9C66300C7AF5B /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE575F1BF9C66300C7AF5B /* JSONModel+networking.m */; };
-		4CDE583E1BF9C66300C7AF5B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57611BF9C66300C7AF5B /* JSONKeyMapper.h */; };
+		4CDE583E1BF9C66300C7AF5B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57611BF9C66300C7AF5B /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE583F1BF9C66300C7AF5B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57621BF9C66300C7AF5B /* JSONKeyMapper.m */; };
-		4CDE58401BF9C66300C7AF5B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57631BF9C66300C7AF5B /* JSONValueTransformer.h */; };
+		4CDE58401BF9C66300C7AF5B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE57631BF9C66300C7AF5B /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE58411BF9C66300C7AF5B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE57641BF9C66300C7AF5B /* JSONValueTransformer.m */; };
 		4CDE59201BF9E2D700C7AF5B /* NSData+Cryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE59021BF9E2D600C7AF5B /* NSData+Cryptor.h */; };
 		4CDE59211BF9E2D700C7AF5B /* NSData+Cryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE59031BF9E2D600C7AF5B /* NSData+Cryptor.m */; };
@@ -51,12 +51,12 @@
 		4CDE59311BF9E2D700C7AF5B /* KPHTestAssociateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE59141BF9E2D700C7AF5B /* KPHTestAssociateHandler.m */; };
 		4CDE59321BF9E2D700C7AF5B /* KPHAESConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE59151BF9E2D700C7AF5B /* KPHAESConfig.h */; };
 		4CDE59331BF9E2D700C7AF5B /* KPHAESConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE59161BF9E2D700C7AF5B /* KPHAESConfig.m */; };
-		4CDE59341BF9E2D700C7AF5B /* KPHDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE59171BF9E2D700C7AF5B /* KPHDelegate.h */; };
+		4CDE59341BF9E2D700C7AF5B /* KPHDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE59171BF9E2D700C7AF5B /* KPHDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE59351BF9E2D700C7AF5B /* KPHRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE59181BF9E2D700C7AF5B /* KPHRequest.h */; };
 		4CDE59361BF9E2D700C7AF5B /* KPHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE59191BF9E2D700C7AF5B /* KPHRequest.m */; };
-		4CDE59371BF9E2D700C7AF5B /* KPHResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591A1BF9E2D700C7AF5B /* KPHResponse.h */; };
+		4CDE59371BF9E2D700C7AF5B /* KPHResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591A1BF9E2D700C7AF5B /* KPHResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE59381BF9E2D700C7AF5B /* KPHResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE591B1BF9E2D700C7AF5B /* KPHResponse.m */; };
-		4CDE59391BF9E2D700C7AF5B /* KPHServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591C1BF9E2D700C7AF5B /* KPHServer.h */; };
+		4CDE59391BF9E2D700C7AF5B /* KPHServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591C1BF9E2D700C7AF5B /* KPHServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDE593A1BF9E2D700C7AF5B /* KPHServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE591D1BF9E2D700C7AF5B /* KPHServer.m */; };
 		4CDE593B1BF9E2D700C7AF5B /* KPHUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDE591E1BF9E2D700C7AF5B /* KPHUtils.h */; };
 		4CDE593C1BF9E2D700C7AF5B /* KPHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE591F1BF9E2D700C7AF5B /* KPHUtils.m */; };
@@ -305,30 +305,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CDE58371BF9C66300C7AF5B /* JSONModelLib.h in Headers */,
+				4CDE582D1BF9C66300C7AF5B /* JSONModel.h in Headers */,
+				4CDE582F1BF9C66300C7AF5B /* JSONModelArray.h in Headers */,
+				4CDE58331BF9C66300C7AF5B /* JSONModelError.h in Headers */,
+				4CDE583E1BF9C66300C7AF5B /* JSONKeyMapper.h in Headers */,
+				4CDE59341BF9E2D700C7AF5B /* KPHDelegate.h in Headers */,
+				4CDE59371BF9E2D700C7AF5B /* KPHResponse.h in Headers */,
+				4CDE59391BF9E2D700C7AF5B /* KPHServer.h in Headers */,
+				4CDE58401BF9C66300C7AF5B /* JSONValueTransformer.h in Headers */,
 				4CDE58311BF9C66300C7AF5B /* JSONModelClassProperty.h in Headers */,
 				4CDE593B1BF9E2D700C7AF5B /* KPHUtils.h in Headers */,
 				4CDE583C1BF9C66300C7AF5B /* JSONModel+networking.h in Headers */,
 				4CDE59241BF9E2D700C7AF5B /* KPHGeneratePasswordHandler.h in Headers */,
 				4CDE59261BF9E2D700C7AF5B /* KPHGetAllLoginsHandler.h in Headers */,
 				4CDE58351BF9C66300C7AF5B /* NSArray+JSONModel.h in Headers */,
-				4CDE583E1BF9C66300C7AF5B /* JSONKeyMapper.h in Headers */,
 				4CDE592C1BF9E2D700C7AF5B /* KPHHandler.h in Headers */,
-				4CDE59371BF9E2D700C7AF5B /* KPHResponse.h in Headers */,
 				4CDE58381BF9C66300C7AF5B /* JSONAPI.h in Headers */,
 				4CDE59281BF9E2D700C7AF5B /* KPHGetLoginsCountHandler.h in Headers */,
 				4CDE59321BF9E2D700C7AF5B /* KPHAESConfig.h in Headers */,
 				4CDE59221BF9E2D700C7AF5B /* KPHAssociateHandler.h in Headers */,
 				4CDE592A1BF9E2D700C7AF5B /* KPHGetLoginsHandler.h in Headers */,
-				4CDE582D1BF9C66300C7AF5B /* JSONModel.h in Headers */,
-				4CDE59391BF9E2D700C7AF5B /* KPHServer.h in Headers */,
 				4CDE583A1BF9C66300C7AF5B /* JSONHTTPClient.h in Headers */,
-				4CDE59341BF9E2D700C7AF5B /* KPHDelegate.h in Headers */,
 				4CCAC3921BF9C30300EA4639 /* KeePassHTTPKit.h in Headers */,
-				4CDE58331BF9C66300C7AF5B /* JSONModelError.h in Headers */,
 				4CDE592E1BF9E2D700C7AF5B /* KPHSetLoginHandler.h in Headers */,
-				4CDE58401BF9C66300C7AF5B /* JSONValueTransformer.h in Headers */,
 				4CDE59201BF9E2D700C7AF5B /* NSData+Cryptor.h in Headers */,
-				4CDE582F1BF9C66300C7AF5B /* JSONModelArray.h in Headers */,
 				4CDE59351BF9E2D700C7AF5B /* KPHRequest.h in Headers */,
 				4CDE59301BF9E2D700C7AF5B /* KPHTestAssociateHandler.h in Headers */,
 			);
