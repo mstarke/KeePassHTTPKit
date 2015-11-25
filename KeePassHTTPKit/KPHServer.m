@@ -33,10 +33,8 @@ static const NSUInteger kKPHDefaultPort = 19455;
 
 #pragma mark - Initializaiton
 
-- (instancetype)init
-{
-  if (self = [super init])
-  {
+- (instancetype)init {
+  if (self = [super init])   {
     // Log Erros
     [GCDWebServer setLogLevel:4];
     
