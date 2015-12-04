@@ -10,6 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString *const KPHSettingsEntryName = @"KeePassHttp Settings";;
+static NSString *const KPHAssociatKeyFormat = @"AES Key: %@";
+static NSString *const KPHGroupName = @"KeePassHttp Passwords";
+
 @class KPHServer;
 @class KPHResponseEntry;
 

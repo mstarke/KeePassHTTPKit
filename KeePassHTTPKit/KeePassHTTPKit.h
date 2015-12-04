@@ -14,7 +14,6 @@ FOUNDATION_EXPORT double KeePassHTTPKitVersionNumber;
 //! Project version string for KeePassHTTPKit.
 FOUNDATION_EXPORT const unsigned char KeePassHTTPKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <KeePassHTTPKit/PublicHeader.h>
 
 
 #import "KPHDelegate.h"
