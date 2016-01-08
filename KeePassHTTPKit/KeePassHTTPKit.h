@@ -15,7 +15,6 @@ FOUNDATION_EXPORT double KeePassHTTPKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char KeePassHTTPKitVersionString[];
 
 
-
 #import "KPHDelegate.h"
 #import "KPHServer.h"
 #import "KPHResponse.h"
