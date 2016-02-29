@@ -20,6 +20,7 @@ static NSString *const KPHGroupName = @"KeePassHttp Passwords";
 @protocol KPHDelegate <NSObject>
 
 @required
+
 - (NSString *)server:(KPHServer *)server labelForKey:(NSString *)key;
 - (NSString *)server:(KPHServer *)server keyForLabel:(NSString *)label;
 - (NSArray<KPHResponseEntry *> *)server:(KPHServer *)server entriesForURL:(NSString *)url;

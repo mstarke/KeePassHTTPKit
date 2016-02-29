@@ -81,29 +81,18 @@ static const NSUInteger kKPHDefaultPort = 19455;
 }
 
 - (BOOL)isRunning {
-  return self.server && self.server.isRunning;
+  return self.server.isRunning;
 }
 
 - (BOOL)start {
-  return [self startWithPort:kKPHDefaultPort];
+  return [self startWithPort:kKPHDefaultPort bindToLocalhost:YES error:nil];
 }
 
-- (BOOL)startWithPort:(NSUInteger)port {
-  if (self.isRunning) {
-    [self.server stop];
+- (BOOL)startWithPort:(NSUInteger)port bindToLocalhost:(BOOL)localhost error:(NSError *__autoreleasing *)error {
+  if(self.isRunning) {
+    [self stop];
   }
-  return [self.server startWithPort:port bonjourName:nil];
-}
-
-- (BOOL)startSynchronously {
-  return [self startSynchronouslyWithPort:kKPHDefaultPort];
-}
-
-- (BOOL)startSynchronouslyWithPort:(NSUInteger)port {
-  if (self.isRunning) {
-    [self.server stop];
-  }
-  return [self.server runWithPort:port bonjourName:nil];
+  return [self.server startWithOptions:@{ GCDWebServerOption_Port: @(port), GCDWebServerOption_BindToLocalhost: @(localhost) } error:error];
 }
 
 - (void)stop {

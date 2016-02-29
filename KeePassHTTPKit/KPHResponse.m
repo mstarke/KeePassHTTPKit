@@ -42,7 +42,9 @@
 - (instancetype)init {
   if (self = [super init]) {
     _Success = NO;
-    _Version = @"KeePassKit";
+    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    NSString *name = bundle.infoDictionary[(NSString *)kCFBundleNameKey];
+    _Version =  [NSString stringWithFormat:@"%@", name];
   }
   return self;
 }

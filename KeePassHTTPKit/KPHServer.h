@@ -15,9 +15,7 @@
 @property (readonly) BOOL isRunning;
 
 - (BOOL)start;
-- (BOOL)startWithPort:(NSUInteger)port;
-- (BOOL)startSynchronously;
-- (BOOL)startSynchronouslyWithPort:(NSUInteger)port;
+- (BOOL)startWithPort:(NSUInteger)port bindToLocalhost:(BOOL)localhost error:(NSError *__autoreleasing *)error;
 - (void)stop;
 
 @end
