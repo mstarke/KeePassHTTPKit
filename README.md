@@ -2,8 +2,8 @@
 
 An Objective-C implementation of the KeePassHttp protocol.
 
-Copyright (c) 2014 James Hurt
-Copyright (c) 2015 Michael Starke, HicknHack Software GmbH
+Copyright (c) 2014 James Hurt <br>
+Copyright (c) 2015-2016 Michael Starke, HicknHack Software GmbH
 
 ## Dependencies
 
