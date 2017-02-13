@@ -103,7 +103,13 @@
 }
 
 - (NSArray *)entriesForURL:(NSURL *)url {
-  NSString *search = url.host;
+  NSString *search;
+  if(url.scheme) {
+    search = url.host;
+  }
+  else {
+    search = url.relativeString;
+  }
   NSArray *entries = nil;
   while (!entries || entries.count == 0) {
     entries = [self delegateEntriesForURL:search];
