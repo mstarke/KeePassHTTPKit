@@ -103,13 +103,8 @@
 }
 
 - (NSArray *)entriesForURL:(NSURL *)url {
-  NSString *search;
-  if(url.scheme) {
-    search = url.host;
-  }
-  else {
-    search = url.relativeString;
-  }
+  /* if we got no scheme, host is nil as well so fall back to the full url string */
+  NSString *search = url.host ? url.host : url.absoluteString;
   NSArray *entries = nil;
   while (!entries || entries.count == 0) {
     entries = [self delegateEntriesForURL:search];
