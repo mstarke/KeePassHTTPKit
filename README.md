@@ -2,8 +2,8 @@
 
 An Objective-C implementation of the KeePassHttp protocol.
 
-Copyright (c) 2014 James Hurt
-Copyright (c) 2015 Michael Starke, HicknHack Software GmbH
+Copyright (c) 2014 James Hurt <br>
+Copyright (c) 2015-2016 Michael Starke, HicknHack Software GmbH
 
 ## Dependencies
 
@@ -58,8 +58,8 @@ carthage bootstrap
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2014 James Hurst
-Copyright (c) 2015 Michael Starke, HicknHack Software GmbH
+Copyright (c) 2014 James Hurst<br>
+Copyright (c) 2015-2016 Michael Starke, HicknHack Software GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
