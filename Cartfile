@@ -1,1 +1,3 @@
 github "swisspol/GCDWebServer" == 3.2.7
+github "jsonmodel/jsonmodel" "e581b876977e4fb01de82b8499c2525aa0042b11" 
+

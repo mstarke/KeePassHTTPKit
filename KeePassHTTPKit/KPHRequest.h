@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+#import "JSONModel/JSONModel.h"
 
 
 static NSString *const kKPHRequestGetLogins = @"get-logins";
