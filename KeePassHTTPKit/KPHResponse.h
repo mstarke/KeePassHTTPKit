@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSonModel.h"
+#import "JSONModel.h"
 
 @protocol KPHResponseStringField
 @end
