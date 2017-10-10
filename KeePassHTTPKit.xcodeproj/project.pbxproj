@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0A25131BFA679D007DFDBA /* GCDWebServers.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CDE593D1BF9E87200C7AF5B /* GCDWebServers.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C4E1DB31EF0467000128BA9 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4E1DB21EF0467000128BA9 /* JSONModel.framework */; };
+		4C7A19B21F8CBEDD00C4D20B /* JSONModel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C4E1DB21EF0467000128BA9 /* JSONModel.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4CCAC3921BF9C30300EA4639 /* KeePassHTTPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCAC3911BF9C30300EA4639 /* KeePassHTTPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CCAC3991BF9C30300EA4639 /* KeePassHTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAC38E1BF9C30300EA4639 /* KeePassHTTPKit.framework */; };
 		4CCAC39E1BF9C30300EA4639 /* KeePassHTTPKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAC39D1BF9C30300EA4639 /* KeePassHTTPKitTests.m */; };
@@ -62,6 +63,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4C0A25131BFA679D007DFDBA /* GCDWebServers.framework in CopyFiles */,
+				4C7A19B21F8CBEDD00C4D20B /* JSONModel.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
