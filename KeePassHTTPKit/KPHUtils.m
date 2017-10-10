@@ -19,7 +19,7 @@
   CCCryptorStatus status = CCCryptorCreate(op, kCCAlgorithmAES, kCCOptionPKCS7Padding, aes.key.bytes, aes.key.length, aes.IV.bytes, &cryptor);
   if (status == kCCSuccess) {
     NSData *inputData;
-    if([NSData instanceMethodForSelector:@selector(initWithBase64EncodedString:options:)]) {
+    if([NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)]) {
       inputData = (base64input) ? [[NSData alloc] initWithBase64EncodedString:input options:0] : [input dataUsingEncoding:NSUTF8StringEncoding];
     }
     else {
