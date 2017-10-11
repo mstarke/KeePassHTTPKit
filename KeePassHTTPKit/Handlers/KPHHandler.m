@@ -67,7 +67,7 @@
 
 - (void)setResponseVerifier:(KPHResponse *)response {
   KPHAESConfig *aes = [KPHAESConfig aesWithKey:[self delegateKeyForLabel:response.Id] base64key:YES];
-  if([NSData respondsToSelector:@selector(base64EncodedStringWithOptions:)]) {
+  if([NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)]) {
     response.Nonce = [aes.IV base64EncodedStringWithOptions:0];
   }
   else {

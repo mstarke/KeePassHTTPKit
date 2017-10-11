@@ -26,7 +26,7 @@
       inputData = (base64input) ? [[NSData alloc] initWithBase64Encoding:input] : [input dataUsingEncoding:NSUTF8StringEncoding];
     }
     NSData *outputData = [inputData runCryptor:cryptor];
-    if([NSData respondsToSelector:@selector(base64EncodedStringWithOptions:)]) {
+    if([NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)]) {
       output = (base64output) ? [outputData base64EncodedStringWithOptions:0] : [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
     }
     else {
