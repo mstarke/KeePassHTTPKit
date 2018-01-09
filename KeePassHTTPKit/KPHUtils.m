@@ -15,6 +15,11 @@
 + (NSString *)performOpertaion:(CCOperation)op withAES:(KPHAESConfig *)aes onString:(NSString *)input base64input:(BOOL)base64input base64output:(BOOL)base64output {
   NSString *output = nil;
   
+  if(!input) {
+    // invalid input!
+    return output;
+  }
+  
   CCCryptorRef cryptor = NULL;
   CCCryptorStatus status = CCCryptorCreate(op, kCCAlgorithmAES, kCCOptionPKCS7Padding, aes.key.bytes, aes.key.length, aes.IV.bytes, &cryptor);
   if (status == kCCSuccess) {
