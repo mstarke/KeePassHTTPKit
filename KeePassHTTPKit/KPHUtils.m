@@ -54,13 +54,13 @@
 + (NSArray<KPHResponseEntry, Optional> *)encryptEntries:(NSArray *)entries withAES:(KPHAESConfig *)aes {
   NSMutableArray<KPHResponseEntry, Optional> *encryptedEntries = entries.mutableCopy;
   
-  for (KPHResponseEntry __strong *entry in encryptedEntries) {
+  for (KPHResponseEntry *entry in encryptedEntries) {
     entry.Name = [KPHUtils encryptString:entry.Name withAES:aes];
     entry.Login = [KPHUtils encryptString:entry.Login withAES:aes];
     entry.Password = [KPHUtils encryptString:entry.Password withAES:aes];
     entry.Uuid = [KPHUtils encryptString:entry.Uuid withAES:aes];
     
-    for (KPHResponseStringField __strong *stringField in entry.StringFields) {
+    for (KPHResponseStringField *stringField in entry.StringFields) {
       stringField.Key = [KPHUtils encryptString:stringField.Key withAES:aes];
       stringField.Value = [KPHUtils encryptString:stringField.Value withAES:aes];
     }
