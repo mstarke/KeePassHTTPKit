@@ -35,7 +35,7 @@
 @property (nonatomic, strong) NSString *Name;
 @property (nonatomic, strong) NSArray<KPHResponseStringField, Optional> *StringFields;
 
-+ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray<KPHResponseStringField, Optional> *)stringFields;
++ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray *)stringFields;
 
 @end
 
