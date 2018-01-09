@@ -24,14 +24,14 @@
   CCCryptorStatus status = CCCryptorCreate(op, kCCAlgorithmAES, kCCOptionPKCS7Padding, aes.key.bytes, aes.key.length, aes.IV.bytes, &cryptor);
   if (status == kCCSuccess) {
     NSData *inputData;
-    if([NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)]) {
+    if(@available(macOS 10.9, *)) {
       inputData = (base64input) ? [[NSData alloc] initWithBase64EncodedString:input options:0] : [input dataUsingEncoding:NSUTF8StringEncoding];
     }
     else {
       inputData = (base64input) ? [[NSData alloc] initWithBase64Encoding:input] : [input dataUsingEncoding:NSUTF8StringEncoding];
     }
     NSData *outputData = [inputData runCryptor:cryptor];
-    if([NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)]) {
+    if(@available(macOS 10.9, *)) {
       output = (base64output) ? [outputData base64EncodedStringWithOptions:0] : [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
     }
     else {

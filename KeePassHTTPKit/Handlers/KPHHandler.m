@@ -49,7 +49,7 @@
   if (status == kCCSuccess)
   {
     NSData *encrypted;
-    if([encrypted respondsToSelector:@selector(initWithBase64EncodedString:options:)]) {
+    if(@available(macOS 10.9, *)) {
      encrypted = [[NSData alloc] initWithBase64EncodedString:request.Verifier options:0];
     }
     else {
@@ -67,7 +67,7 @@
 
 - (void)setResponseVerifier:(KPHResponse *)response {
   KPHAESConfig *aes = [KPHAESConfig aesWithKey:[self delegateKeyForLabel:response.Id] base64key:YES];
-  if([NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)]) {
+  if(@available(macOS 10.9, *)) {
     response.Nonce = [aes.IV base64EncodedStringWithOptions:0];
   }
   else {

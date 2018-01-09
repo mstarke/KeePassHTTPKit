@@ -20,8 +20,8 @@
 + (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key {
   KPHAESConfig *aes = [KPHAESConfig new];
   
-  
-  if([NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)]) {
+
+  if(@available(macOS 10.9, *)) {
     aes.key = (base64key) ? [[NSData alloc] initWithBase64EncodedString:key options:0] : [key dataUsingEncoding:NSUTF8StringEncoding];
   }
   else {
@@ -33,7 +33,7 @@
 
 + (instancetype)aesWithKey:(NSString *)key base64key:(BOOL)base64key IV:(NSString *)IV base64IV:(BOOL)base64IV {
   KPHAESConfig *aes = [KPHAESConfig new];
-  if([NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)]) {
+  if(@available(macOS 10.9, *)) {
     aes.key = (base64key) ? [[NSData alloc] initWithBase64EncodedString:key options:0] : [key dataUsingEncoding:NSUTF8StringEncoding];
     aes.IV = (base64IV) ? [[NSData alloc] initWithBase64EncodedString:IV options:0] : [IV dataUsingEncoding:NSUTF8StringEncoding];
   }
