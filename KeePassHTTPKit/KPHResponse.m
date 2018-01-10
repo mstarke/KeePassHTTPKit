@@ -21,8 +21,8 @@
 
 @implementation KPHResponseEntry
 
-+ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray<KPHResponseStringField, Optional> *)stringFields {
-  KPHResponseEntry *entry = [KPHResponseEntry new];
++ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray<KPHResponseStringField *><KPHResponseStringField,Optional> *)stringFields {
+  KPHResponseEntry *entry = [[KPHResponseEntry alloc] init];
   entry.url = url;
   entry.Name = name;
   entry.Login = login;

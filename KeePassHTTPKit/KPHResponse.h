@@ -33,9 +33,9 @@
 @property (nonatomic, strong) NSString<Optional> *Password;
 @property (nonatomic, strong) NSString *Uuid;
 @property (nonatomic, strong) NSString *Name;
-@property (nonatomic, strong) NSArray<KPHResponseStringField, Optional> *StringFields;
+@property (nonatomic, strong) NSArray<KPHResponseStringField *> <KPHResponseStringField, Optional> *StringFields;
 
-+ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray<KPHResponseStringField, Optional> *)stringFields;
++ (instancetype)entryWithUrl:(NSString *)url name:(NSString *)name login:(NSString *)login password:(NSString *)password uuid:(NSString *)uuid stringFields:(NSArray<KPHResponseStringField *> <KPHResponseStringField, Optional> *)stringFields;
 
 @end
 
@@ -62,7 +62,7 @@
 @property (nonatomic, strong) NSString *Hash;
 
 /// The resulting entries for a get-login request
-@property (nonatomic, strong) NSArray<KPHResponseEntry, Optional> *Entries;
+@property (nonatomic, strong) NSArray<KPHResponseEntry *> <KPHResponseEntry, Optional> *Entries;
 
 /// Nonce value used in conjunction with all encrypted fields,
 /// randomly generated for each request
