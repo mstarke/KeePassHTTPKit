@@ -104,9 +104,10 @@
 
 - (NSArray *)entriesForURL:(NSURL *)url {
   /* if we got no scheme, host is nil as well so fall back to the full url string */
-  NSString *search = url.host ? url.host : url.absoluteString;
+  NSString *originalSearch = url.host ? url.host : url.absoluteString;
+  NSString *search = [originalSearch copy];
   NSArray *entries = nil;
-  while (!entries || entries.count == 0) {
+  while ((!entries || entries.count == 0) && ([originalSearch isEqualToString:search] || [search rangeOfString:@"."].length > 0)) {
     entries = [self delegateEntriesForURL:search];
     NSRange dot = [search rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
     if (dot.location == NSNotFound || dot.location + 1 >= search.length) {

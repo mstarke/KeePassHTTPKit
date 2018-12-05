@@ -1,5 +1,7 @@
 # KeePassHTTPKit
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 An Objective-C implementation of the KeePassHttp protocol.
 
 Copyright (c) 2014 James Hurt <br>
